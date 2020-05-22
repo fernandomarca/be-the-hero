@@ -18,7 +18,7 @@ export default function NewIncident() {
 
     const history = useHistory();
 
-    async function handleNewIncident() {
+    async function handleNewIncident(e) {
         e.preventDefault();
 
         const data = {
@@ -32,6 +32,7 @@ export default function NewIncident() {
                 headers: {
                     Authorization: ongId,
                 }
+
             })
 
             history.push('/profile');
@@ -45,7 +46,7 @@ export default function NewIncident() {
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                    <imag src={logoImg} alt="Be the hero"></imag>
+                    <img src={logoImg} alt="Be the hero"></img>
 
                     <h1>Cadastrar novo caso</h1>
                     <p>Descreva o caso detalhadamente para encontar
